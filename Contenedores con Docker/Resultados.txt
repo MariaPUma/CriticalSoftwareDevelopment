@@ -1,0 +1,5 @@
+{'mediciones': {'medicion': '2024-12-09 12:20:38', 'valor_real': 1.0}, 'anomalia': 'no', 'prediccion': -1, 'error': 0}
+{'mediciones': {'medicion': '2024-12-09 12:21:07', 'valor_real': 2.0}, 'anomalia': 'no', 'prediccion': -1, 'error': 0}
+{'mediciones': {'medicion': '2024-12-09 12:21:16', 'valor_real': 3.0}, 'anomalia': 'no', 'prediccion': -1, 'error': 0}
+{'mediciones': [{'time': '2024-12-09 12:20:38', 'valor': b'1'}, {'time': '2024-12-09 12:21:07', 'valor': b'2'}, {'time': '2024-12-09 12:21:16', 'valor': b'3'}], 'anomalia': 'no', 'prediccion': 0.6100628, 'error': 1.3899372220039368}
+{'mediciones': [{'time': '2024-12-09 12:21:16', 'valor': b'3'}, {'time': '2024-12-09 12:21:24', 'valor': b'2'}, {'time': '2024-12-09 12:48:16', 'valor': b'445'}], 'anomalia': 'si', 'prediccion': 95.15282, 'error': 75.15281677246094}

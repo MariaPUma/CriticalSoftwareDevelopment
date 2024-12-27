@@ -1,0 +1,84 @@
+version: "3"
+services:
+  web:
+    image: mpuma17/practica2:parte1
+    ports:
+      - "4000:80"
+    networks:
+      - webnet
+    environment:
+      - REDIS_HOST=redis
+  zookeeper:
+    image: zookeeper:latest
+    container_name: zookeeper
+    ports:
+      - "2181:2181"
+    networks:
+      - webnet
+  aplicacion1:
+    image: mpuma17/practica3:parte1
+    container_name: aplication1
+    environment:
+      - ID=1
+      - ZOOKEEPER_HOST=zookeeper
+    depends_on:
+      - zookeeper
+    networks:
+      - webnet
+  aplicacion2:
+    image: mpuma17/practica3:parte1
+    container_name: aplication2
+    environment:
+      - ID=2
+      - ZOOKEEPER_HOST=zookeeper
+    depends_on:
+      - zookeeper
+    networks:
+      - webnet
+  aplicacion3:
+    image: mpuma17/practica3:parte1
+    container_name: aplication3
+    environment:
+      - ID=3
+      - ZOOKEEPER_HOST=zookeeper
+    depends_on:
+      - zookeeper
+    networks:
+      - webnet
+  visualizer:
+    image: dockersamples/visualizer:stable
+    ports:
+      - "8080:8080"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+    networks:
+      - webnet 
+  redis:
+    image: redislabs/redistimeseries:latest
+    ports:
+      - "6379:6379" 
+    hostname: redis  
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+    networks:
+      - webnet
+  grafana: 
+    image: grafana/grafana 
+    ports: 
+      - 3000:3000 
+    volumes: 
+      - grafana_data:/var/lib/grafana 
+    depends_on: 
+      - redis 
+    networks:
+      - webnet
+    environment: 
+      GF_INSTALL_PLUGINS: redis-datasource 
+volumes: 
+  grafana_data:
+networks:
+  webnet:
