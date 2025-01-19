@@ -1,27 +1,25 @@
-# Desarrollo de Software Crítico
+### Critical Software Development  
+This repository contains a collection of projects developed for critical software environments. The primary focus is on providing robust and reliable solutions for applications where availability, security, and accuracy are essential.  
 
-Este repositorio contiene una colección de proyectos desarrollados para entornos de software crítico. El enfoque principal está en ofrecer soluciones robustas y fiables en aplicaciones donde la disponibilidad, seguridad y precisión son fundamentales.
+### Included Projects  
+1. **Anomaly Detection with Machine Learning**  
+   Models designed to identify anomalous behaviors in time series data for critical systems. These models leverage machine learning algorithms to:  
+   - Monitor systems in real time.  
+   - Detect unusual patterns or out-of-the-ordinary events.  
+   - Enhance early detection of potential failures.  
+   **Models**: LSTM Neural Network, Autoencoder, and Isolation Forest.  
 
-## Proyectos incluidos
+2. **Containers and Deployment with Docker**  
+   Configuration and management of containers using Docker to ensure:  
+   - Application portability across different environments.  
+   - Fast and efficient deployment.  
+   - Isolation and consistency in runtime environments.  
 
-### 1. Detección de anomalías con Machine Learning
-Modelos diseñados para identificar comportamientos anómalos en series temporales para sistemas críticas. Estos modelos utilizan algoritmos de aprendizaje automático para:
-- Monitorear sistemas en tiempo real.
-- Identificar patrones inusuales o eventos fuera de lo común.
-- Mejorar la detección temprana de fallos potenciales.
-Modelos: red neuronal LSTM, Autoencoder y Isolation Forest 
+3. **Distributed Coordination with ZooKeeper**  
+   Implementation of tools for orchestrating and managing distributed systems, including:  
+   - Coordination mechanisms between distributed nodes.  
+   - Centralized configuration management.  
+   - Support for highly available and resilient environments.  
 
-### 2. Contenedores y despliegue con Docker
-Configuración y gestión de contenedores usando Docker para garantizar:
-- Portabilidad de las aplicaciones entre diferentes entornos.
-- Despliegue rápido y eficiente.
-- Aislamiento y consistencia en los entornos de ejecución.
-
-### 3. Coordinación distribuida con ZooKeeper
-Implementación de herramientas para la orquestación y gestión de sistemas distribuidos. Incluye:
-- Mecanismos de coordinación entre nodos distribuidos.
-- Gestión de configuración centralizada.
-- Soporte para entornos altamente disponibles y resilientes.
-
-## Objetivo
-El objetivo principal de este repositorio es proporcionar ejemplos prácticos para el desarrollo de software crítico, abordando retos comunes como la detección de fallos, la escalabilidad y la gestión eficiente de entornos distribuidos.
+### Objective  
+The primary goal of this repository is to provide practical examples for critical software development, addressing common challenges such as fault detection, scalability, and efficient management of distributed environments.  
